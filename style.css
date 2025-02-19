@@ -1,0 +1,475 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: black; */
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header {
+    font-size: medium;
+    
+}
+
+.navbarDetails ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.navbarDetails ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.icons ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+
+.main {
+    padding: 2%;
+    /* margin: 2%; */
+    position: relative;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;  /* Center text vertically */
+    justify-content: flex-start;  /* Align text to the left */
+}
+
+.main::before {
+    content: '';
+    background: url("https://media.istockphoto.com/id/938742222/photo/cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=D1z4xPCs-qQIZyUqRcHrnsJSJy_YbUD9udOrXpilNpI=");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;  /* Apply opacity only to the image */
+    z-index: 0;  /* Place the image behind the text */
+}
+
+/* Overlay Text Styling */
+.overlayimage-text {
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    width: 50%;
+    /* font-size: 14px; */
+    /* font-weight: bold; */
+    z-index: 1;  /* Ensure text is on top of the image */
+}
+.main-title{
+    font-size: 36px;
+    margin-bottom: 2%;
+}
+.main-line{
+    background-color: red;
+    /* width: 20px; */
+    height: 8px;
+    border: none;
+    margin-bottom: 2%;
+}
+
+.about-us-title{
+    margin-top: 30px;
+    font-size: 30px;
+    text-align: center;
+
+}
+.about-us-title-hr{
+    width: 20%;
+    margin: 0 auto;
+    height: 8px;
+    border: none;
+    background-color: red;
+    margin-bottom: 5%;
+    
+}
+
+.about-us-text{
+    display: flex;
+    /* justify-content: space-around; */
+    /* width: 90%; */
+    justify-content: space-evenly;
+
+}
+.about-us-text img{
+    margin: 25px;
+    width: 500px;
+    height: 300px;
+}
+.about-us-text-p{
+    width: 400px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.about-us-text-hr{
+    width: 30%;
+    margin-left: 10%;
+    height: 4px;
+    border: none;
+    background-color: red;
+
+}
+.menu-hr{
+    width: 20%;
+    margin: 0 auto;
+    height: 8px;
+    border: none;
+    background-color: red;
+}
+.menu-p{
+    /* text-align: center; */
+    padding: 2%;
+    width: 80%;
+    margin-left: 10%;
+}
+.pizza-imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  /* Two columns of equal width */
+    gap: 10px;  /* Adds space between items */
+    margin-left: 10%;
+}
+
+.pizzas {
+    text-align: center; 
+     /* Centers the text inside each pizza div */
+     display: flex;
+     /* justify-content: space-b; */
+     padding: 10px;
+    
+}
+.pizza-name{
+    color: yellow;
+   text-transform: uppercase;
+}
+.pizza-p{
+    font-size: 12px;
+    width: 50%;
+}
+
+.pizzas img {
+    width: 20%;  /* Makes sure images fill the container */
+    height: 50%;  /* Keeps the aspect ratio of images intact */
+}
+
+.pizzas div {
+    padding-top: 10px;  /* Adds some spacing between the image and the text */
+}
+
+.carousel-hr{
+    width: 20%;
+    margin: 0 auto;
+    height: 8px;
+    border: none;
+    background-color: red;
+    margin-bottom: 5% ;
+}
+.carousel {
+    max-width: 800px; /* Smaller width for the carousel */
+    margin: 0 auto;  /* Centers the carousel on the page */
+    /* padding: 10%; */
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust the height of the carousel */
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;  /* Ensure the image stretches to full width */
+    height: 100%;  /* Ensure the image covers the height of the container */
+    object-fit: cover;  /* Keeps the aspect ratio intact, without distortion */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    color: #fff;  /* White arrows */
+    font-size: 30px;  /* Increase the size of the arrows */
+    width: 50px;  /* Set a fixed width for the navigation buttons */
+    /* background-color: rgba(0, 0, 0, 0.5);  Semi-transparent dark grey background */
+    border-radius: 50%;  /* Circular buttons */
+    opacity: 0.7;  /* Slight opacity for subtlety */
+    top: 50%;  /* Position vertically in the middle */
+    transform: translateY(-50%);  /* Adjust for perfect centering */
+    z-index: 10;  /* Ensure the icons stay above the carousel */
+}
+
+.carousel-control-prev {
+    left: -60px;  /* Position the left arrow outside the image */
+}
+
+.carousel-control-next {
+    right: -60px;  /* Position the right arrow outside the image */
+}
+
+
+
+.carousel-indicators li {
+    background-color: #333;  /* Dark grey color for the indicators */
+}
+.gallary-title{
+    margin-top: 30px;
+    font-size: 30px;
+    text-align: center;
+    /* margin-top: 20px; */
+    padding-top: 4%;
+}
+.gallary-hr{
+    width: 20%;
+    margin: 0 auto;
+    height: 8px;
+    border: none;
+    background-color: red;
+    margin-bottom: 3% ;
+    /* margin-top: 5%; */
+}
+.gallary-container {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    height: 400px;
+    /* border: 2px solid red; */
+    gap: 10px;
+  }
+  
+  .gallary-cont-1 {
+    width: 50%;
+    display: flex;
+    /* border: 2px solid yellow; */
+  }
+  
+  .grid-item1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .garally-cont-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 100%; /* Ensures it stays within the container */
+    gap: 5px;
+    /* border: 2px solid purple; */
+  }
+  
+  .grid-item2 {
+    width: 100%;
+    height: 32%; /* 3 images with gaps will fit within 100% height */
+  }
+  
+  .grid-item2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .gallary-cont-3 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 5px;
+  }
+  
+  .grid-item3 {
+    width: 100%;
+    height: 48%; /* 2 images with gap will fit within 100% height */
+  }
+  
+  .grid-item3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .find-us h1{
+    margin-top: 30px;
+    font-size: 30px;
+    text-align: center;
+    /* margin-top: 20px; */
+    padding-top: 4%;
+  }
+  .find-us hr{
+    width: 20%;
+    margin: 0 auto;
+    height: 8px;
+    border: none;
+    background-color: red;
+    margin-bottom: 3% 
+  }
+  .find-us-container{
+    display: flex;
+    height: 400px;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .find-us-address{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+  }
+ .find-us-image img{
+    display: flex;
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.footer{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer img{
+    width: 80px;
+    height: 80px;
+}
+.end{
+    text-align: center;
+    padding-top: 1%;
+    font-size: 10px;
+}
+
+    /* .item img{
+        height: 200px;
+        width: 200px;
+
+    } */
+
+/* Mobile Responsiveness */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+    .header{
+        /* text-align: center; */
+        margin-left: 25%;
+    }
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbarDetails ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 30%;
+        background-color: black;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .navbarDetails ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .icons ul {
+        gap: 10px;
+    }
+
+    .main img {
+        width: 90%;
+    }
+
+    .about-us-text-hr{
+        width: 80%;
+    }
+    .about-us-text {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-us-text-p {
+        margin-left: 0;
+    }
+
+    .pizza-imgs {
+        grid-template-columns: 1fr; 
+        width: 100%; 
+        height: 100%;
+        /* font-size: larger; */
+    }
+    .pizza-p{
+        font-size: 16px;
+    }
+    
+
+
+    .pizzas {
+        width: 80%;  /* Makes each card take up more space */
+        margin: 0 auto;
+        /* font-size: large; */
+    }
+
+    .carousel{
+        width: 80%;
+        height: 80%;
+    }
+    .gallary{
+        padding: 10%;
+
+        /* text-align: center
+        ; */
+        /* align-items: center; */
+    }
+    .find-us-container {
+        /* flex-direction: column; */
+        text-align: center;
+    }
+
+    .find-us-address {
+        width: 90%;
+        text-align: center;
+    }
+
+    .find-us-image img {
+        max-width: 90%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
